@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5410A505-5371-4CFA-A6F7-82B2829F544B}</ProjectGuid>
+    <RootNamespace>Manager</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <Keyword>MFCDLLProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\bin\release\</OutDir>
+    <IntDir>..\obj\Release\Manager\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <ModuleDefinitionFile>.\Manager.def</ModuleDefinitionFile>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;_DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <ModuleDefinitionFile>.\Manager.def</ModuleDefinitionFile>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>.\Manager.def</ModuleDefinitionFile>
+      <AdditionalOptions>/NODEFAULTLIB:MSVCRT.lib %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_WINDOWS;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>.\Manager.def</ModuleDefinitionFile>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ListControl.cpp" />
+    <ClCompile Include="MainWnd.cpp" />
+    <ClCompile Include="Manager.cpp" />
+    <ClCompile Include="SortHeaderCtrl.cpp" />
+    <ClCompile Include="SortListCtrl.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="UI\Base\ControlBase.cpp" />
+    <ClCompile Include="UI\Base\GlobalFunction.cpp" />
+    <ClCompile Include="UI\Base\MessageInterface.cpp" />
+    <ClCompile Include="UI\Button\HideButton.cpp" />
+    <ClCompile Include="UI\Button\ImageButton.cpp" />
+    <ClCompile Include="UI\Dialog\DlgBase.cpp" />
+    <ClCompile Include="UI\Dialog\DlgPopup.cpp" />
+    <ClCompile Include="UI\Dialog\DlgSkin.cpp" />
+    <ClCompile Include="UI\Dialog\WndShadow.cpp" />
+    <ClCompile Include="UI\Menu\MenuEx.cpp" />
+    <ClCompile Include="UI\Menu\MenuItem.cpp" />
+    <ClCompile Include="UI\Other\Frame.cpp" />
+    <ClCompile Include="UI\Other\Line.cpp" />
+    <ClCompile Include="UI\Other\SelectBox.cpp" />
+    <ClCompile Include="UI\Picture\Picture.cpp" />
+    <ClCompile Include="UI\Tab\Tab.cpp" />
+    <ClCompile Include="UI\Timer\Timer.cpp" />
+    <ClCompile Include="ViewFrame.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ListControl.h" />
+    <ClInclude Include="MainWnd.h" />
+    <ClInclude Include="Manager.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SortHeaderCtrl.h" />
+    <ClInclude Include="SortListCtrl.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="UI\Base\ControlBase.h" />
+    <ClInclude Include="UI\Base\GlobalFunction.h" />
+    <ClInclude Include="UI\Base\MessageInterface.h" />
+    <ClInclude Include="UI\Button\HideButton.h" />
+    <ClInclude Include="UI\Button\ImageButton.h" />
+    <ClInclude Include="UI\Dialog\DlgBase.h" />
+    <ClInclude Include="UI\Dialog\DlgPopup.h" />
+    <ClInclude Include="UI\Dialog\DlgSkin.h" />
+    <ClInclude Include="UI\Dialog\WndShadow.h" />
+    <ClInclude Include="UI\Menu\MenuEx.h" />
+    <ClInclude Include="UI\Menu\MenuItem.h" />
+    <ClInclude Include="UI\MyUI.h" />
+    <ClInclude Include="UI\Other\Frame.h" />
+    <ClInclude Include="UI\Other\Line.h" />
+    <ClInclude Include="UI\Other\SelectBox.h" />
+    <ClInclude Include="UI\Picture\Picture.h" />
+    <ClInclude Include="UI\Tab\Tab.h" />
+    <ClInclude Include="UI\Timer\Timer.h" />
+    <ClInclude Include="ViewFrame.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Manager.def" />
+    <None Include="res\Manager.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Manager.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\ARROW.png" />
+    <Image Include="res\AWAY.png" />
+    <Image Include="res\BACK_FRAME.png" />
+    <Image Include="res\BTN_GREEN.png" />
+    <Image Include="res\BT_BOX.png" />
+    <Image Include="res\BT_CANCEL.png" />
+    <Image Include="res\BT_CLOSE.png" />
+    <Image Include="res\BT_DEFAULT.png" />
+    <Image Include="res\BT_DOWNLOAD.png" />
+    <Image Include="res\BT_DROP_DOWN.png" />
+    <Image Include="res\BT_FEEDBACK.png" />
+    <Image Include="res\BT_MENU.png" />
+    <Image Include="res\BT_MIN.png" />
+    <Image Include="res\BT_SCROLL_DOWN.png" />
+    <Image Include="res\BT_SCROLL_UP.png" />
+    <Image Include="res\BT_SKIN.png" />
+    <Image Include="res\BT_SKIN_COLOR.png" />
+    <Image Include="res\BT_SKIN_CUSTOMIZE.png" />
+    <Image Include="res\BT_SKIN_IMAGE.png" />
+    <Image Include="res\BUSY.png" />
+    <Image Include="res\CHECK_BOX.png" />
+    <Image Include="res\EDIT.png" />
+    <Image Include="res\FRAME.png" />
+    <Image Include="res\GAME_ITEM.png" />
+    <Image Include="res\GAME_LIST.png" />
+    <Image Include="res\HEAD_BKG.png" />
+    <Image Include="res\HOVER.png" />
+    <Image Include="res\IMOFFLINE.png" />
+    <Image Include="res\IMONLINE.png" />
+    <Image Include="res\INVISIBLE.png" />
+    <Image Include="res\LOGIN_LIST_CLOSE.png" />
+    <Image Include="res\LOGIN_LIST_HEAD.png" />
+    <Image Include="res\LOGIN_MENU.png" />
+    <Image Include="res\LOGO.png" />
+    <Image Include="res\MENUEX_BACK.png" />
+    <Image Include="res\MENU_BBS.png" />
+    <Image Include="res\MENU_UPDATE.png" />
+    <Image Include="res\MUTE.png" />
+    <Image Include="res\QME.png" />
+    <Image Include="res\SCROLL_V.png" />
+    <Image Include="res\SkinBkg.png" />
+    <Image Include="res\SkinPushedBkg.png" />
+    <Image Include="res\SKIN_PIC_0.png" />
+    <Image Include="res\SKIN_PIC_1.png" />
+    <Image Include="res\SKIN_PIC_2.png" />
+    <Image Include="res\SKIN_PIC_3.png" />
+    <Image Include="res\SKIN_PIC_4.png" />
+    <Image Include="res\SKIN_PIC_5.png" />
+    <Image Include="res\SKIN_PIC_6.png" />
+    <Image Include="res\SKIN_PIC_7.png" />
+    <Image Include="res\SKIN_PIC_8.png" />
+    <Image Include="res\SKIN_PIC_SMALL_0.png" />
+    <Image Include="res\SKIN_PIC_SMALL_1.png" />
+    <Image Include="res\SKIN_PIC_SMALL_2.png" />
+    <Image Include="res\SKIN_PIC_SMALL_3.png" />
+    <Image Include="res\SKIN_PIC_SMALL_4.png" />
+    <Image Include="res\SKIN_PIC_SMALL_5.png" />
+    <Image Include="res\SKIN_PIC_SMALL_6.png" />
+    <Image Include="res\SKIN_PIC_SMALL_7.png" />
+    <Image Include="res\SKIN_PIC_SMALL_8.png" />
+    <Image Include="res\STATUS_ARROW.png" />
+    <Image Include="res\Tab1.png" />
+    <Image Include="res\Tab2.png" />
+    <Image Include="res\Tab3.png" />
+    <Image Include="res\Tab4.png" />
+    <Image Include="res\Tab5.png" />
+    <Image Include="res\Tab6.png" />
+    <Image Include="res\Tab7.png" />
+    <Image Include="res\Tab8.png" />
+    <Image Include="res\Tab_Seperator.png" />
+    <Image Include="res\WindowsBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="sqlite3\sqlite3.vcxproj">
+      <Project>{4a28904f-55db-0e4a-a131-469c203ca271}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Manager.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
